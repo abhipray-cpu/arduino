@@ -1,0 +1,1 @@
+I used Korneliusz Jarzebski’s MPU6050 library from GitHub.
