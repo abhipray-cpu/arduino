@@ -1,0 +1,15 @@
+The tracking module is used to track a line
+The sensor detects if a light reflecting or absorbing area is in front of it. 
+It shows which of the 2 areas it is via digital output, as you can see in the picture below.
+The Sensitivity (minimum range) of the sensor can be adjusted by the controller.
+
+This behavior can be used to automatically follow a line with a robot.
+
+so this sensor can be used as object detector has well and can be used to differentiate between a ligght absorbing
+as well as ligth reflecting surface
+
+for light reflecting surface red light will be lighted
+and for reflecting no such change
+
+it sends a beam of light and other sensor measures for the reflected light
+if it gets some means the surface is of reflecting type and if not the surface is of absorbing type

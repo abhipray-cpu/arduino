@@ -1,0 +1,4 @@
+Photo Interrupter Module Keyes KY-010 for Arduino, will trigger a signal when light between the sensor's gap is blocked.
+THe KY-010 Photo Interrupter module consists of an optical emitter/detector in the front and two resistors (1 kΩ and 33 Ω)
+ in the back. The sensor uses a beam of light between de emitter an detector to check if the path between both is being
+  blocked by an opaque object.

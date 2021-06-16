@@ -1,0 +1,8 @@
+Same as reed switch pluus it can measure polarity as well as intesity of magneetic field
+The KY-024 Linear magnetic Hall sensor reacts in the presence of a magnetic field. It has a
+ potentiometer to adjust the sensitivity of the sensor and it
+ provides both analog and digital outputs.
+
+The digital output acts as a switch that will turn on/off when a magnet is near, 
+similar to the KY-003. On the other hand, the analog output can measure the polarity
+ and relative strength of the magnetic field.

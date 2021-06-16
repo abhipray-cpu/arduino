@@ -1,0 +1,270 @@
+IR Communication is a very easy to use, inexpensive and 
+common way of communication. IR radiation is basically a 
+light that cannot be seen by a human eye. As it is undetectable 
+to human eye, it is perfect for wireless communication. IR radiations 
+are everywhere, these emits from sun, light bulbs and many other things.
+
+IR light (Transmitter) is almost similar to visible light except its wavelength 
+is longer. When you hit a TV remote button, IR Led transmit information to the TV.
+ IR Led turns on and off 38000 times a second to transmit information to IR receiver in TV.
+
+ IR sender module:
+ The IR sender is used to receive the infrared rays 
+ that are emitted by IR emitter. The IR receiver module 
+ consists of a IR receiver. The IR receiver is of many types, 
+ some are shown below
+It has module comes with a remote.
+ These are inexpensive and can be used in 
+ many projects from simple to complicated.
+  The basically consists of a IR emitter that sends a 
+  signal to IR receiver connected with the Arduino.
+
+  Ir receive:
+  he connections are very easier. Connect the 5V and ground of the Arduino to the 5v and ground of 
+  the IR receiver and the pin 11 of the Arduino to the signal pin of IR receiver.
+
+Before uploading the code, download the library from here  and place it in the Arduino/libraries directory
+
+
+include this library IRremote.h
+for ir communication
+
+Code for receiver:example
+
+#include <IRremote.h>                                                                 // Adding the library for IR communication
+
+int IR_PIN = 11;                                                                                 // Declaring pin 11 for IR receiver signal
+
+IRrecv irDetect( IR_PIN );                                                                             // Using the library function
+
+decode_results irIn ;                     
+
+void setup ( )
+
+{
+
+  Serial.begin( 9600 ) ;
+
+
+
+
+  irDetect.enableIRIn ( ) ;                                                               // This command will start the Receiver
+
+}
+
+void loop ( ) {
+
+  if (irDetect.decode(&irIn ) ) {
+
+    decodeIR ( ) ;
+
+    irDetect.resume ( ) ;
+
+  }
+
+}
+
+void decodeIR ( )                                                              // This will tell us which key Is pressed.
+
+{
+
+  switch(irIn.value)
+
+ {
+
+
+
+
+  case 0xFF629D: 
+
+    Serial.println( " Up Arrow " );
+
+    break;
+
+
+
+
+  case 0xFF22DD: 
+
+    Serial.println( " Left Arrow " );
+
+    break;
+
+
+
+
+  case 0xFF02FD: 
+
+    Serial.println( "OK" );
+
+    break;
+
+
+
+
+  case 0xFFC23D: 
+
+    Serial.println ( " Right Arrow " ) ;
+
+    break;
+
+
+
+
+  case 0xFFA857: 
+
+    Serial.println ( " Down Arrow " ) ;
+
+    break ;
+
+
+
+
+  case 0xFF6897: 
+
+    Serial.println ( " 1 " ) ;
+
+    break;
+
+
+
+
+  case 0xFF9867: 
+
+    Serial.println ( " 2 " ) ;
+
+    break;
+
+
+
+
+  case 0xFFB04F : 
+
+    Serial.println ( " 3 " ) ;
+
+    Break ;
+
+
+
+
+  case 0xFF30CF : 
+
+    Serial.println ( " 4 " ) ;
+
+    break;
+
+
+
+
+  case 0xFF18E7 : 
+
+    Serial.println ( " 5" ) ;
+
+    break;
+
+
+
+
+  case 0xFF7A85 : 
+
+    Serial.println ( " 6 " ) ;
+
+    break;
+
+
+
+
+  case 0xFF10EF : 
+
+    Serial.println ( " 7" ) ;
+
+    break;
+
+
+
+
+  case 0xFF38C7: 
+
+    Serial.println ( " 8" ) ;
+
+    break;
+
+
+
+
+  case 0xFF5AA5: 
+
+    Serial.println ( "9 " ) ;
+
+    break;
+
+
+
+
+  case 0xFF42BD: 
+
+    Serial.println ( "* " ) ;
+
+    break;
+
+
+
+
+  case 0xFF4AB5 :   
+
+    Serial.println ( "0 " );
+
+    break;
+
+
+
+
+  case 0xFF52AD: 
+
+    Serial.println ( " # " ) ;
+
+    break;
+
+
+
+
+  default:
+
+   break;
+
+
+
+
+  }
+
+
+  2)code for Transmitter:
+  The IR emitter is also known as the IR transmitter
+  . The IR emitter module is very inexpensive and it is very easy to use.
+   It has many applications. It can be used in the projects like controlling 
+   a TV, controlling a motor and many things can be controlled using it.
+    The IR emitter module consists of a Light emitting diode that is similar
+     to the common light emitting diode but different material is used. 
+     This diode sends the information in the form of infrared rays that
+      is then received by the receiver.
+
+      // This code is for the IR emitter Module
+// install the library before uploading the code
+#include <Arduino.h>
+#include<IRremote.h>
+#define switch 4
+IRsend irsend ;
+
+void setup( )
+{pinMode(switch,INPUT);
+Serial.begin(9600);
+}
+
+void loop()
+{
+int val=digitalRead(switch);
+if(val == HIGH){
+  Serial.println("re daba diya button tau");
+  irsend.sendNEC(0x20dfc03f, 32); // This command is for volume up
+}
+}

@@ -1,0 +1,25 @@
+it has three output pins
+signal vcc anf gnd pin
+
+vcc->+5v
+signal->any analog pin
+gnd->gnd
+
+#include "Plotter.h"
+
+double x;
+
+Plotter p;
+
+void setup()
+{
+    p.Begin();
+
+    p.AddTimeGraph( "Some title of a graph", 1500, "label for x", x );
+}
+
+void loop() {
+    x = 10*sin( 2.0*PI*( millis() / 5000.0 ) );
+
+    p.Plot(); // usually called within loop()
+}

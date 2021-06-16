@@ -1,0 +1,6 @@
+Arduino magnetic reed switch module Keyes KY-021.
+ A reed switch is a magnetic sensor that is normally
+  open and gets closed when exposed to a magnetic field.
+
+  2 types of reed switch are available superior one
+  provides both analog and digital as well as senstivity control

@@ -1,0 +1,4 @@
+KY-020 Arduino tilt switch sensor module.
+ Closes the circuit when it is tilted to 
+ the side as long as it is moved with enough
+  force and degree of inclination to activate the ball switch inside.

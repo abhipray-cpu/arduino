@@ -1,0 +1,11 @@
+Accelerometre:This is basically associated with the linear motion in a 3D plane and measures the tilt with respect to each axis
+so how to determine the direction of motion along the :
+1)x-axis : positive coressponds to the forward direction and negative coressponds to the backward coressponding
+2)y-axis :  positive coressponds to the right direction and forward coressponds to the backward coressponding 
+3)z-axis :  positive coressponds to the upward direction and negative coressponds to the downward coressponding
+
+
+Gyroscope:
+this is used to measure the angular velocity of the moving body along all the 3 axis.Mainly associated with the rotational motion in the 3D plane:
+
+sp combined it can compute both the direction of motion of body as well as rotation/angular_velocity associated with each of the axis

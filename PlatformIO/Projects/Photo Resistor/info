@@ -1,0 +1,8 @@
+A photoresistor or photocell is a light-controlled variable resistor.
+ The resistance of a photoresistor decreases with increasing incident light intensity. 
+ A photoresistor can be applied in light-sensitive detector circuits, and light- and dark-activated switching circuits.
+  It's also called light-dependent resistor (LDR).
+
+In this tutorial you will learn how to use a photoresistor with and without arduino uno.
+
+Haan tau so this sensor is good for light sensitive projects

@@ -1,0 +1,22 @@
+IR light is like visible light but it is invisible to our eyes, because of which they are suitable in application of wireless communication.
+The band for IR (Infrared) in electromagnetic spectrum is 300GHz to 430 THz and wavelength range of around 700nm to 1mm.
+Along with the IR LED some other sources like sun, light bulbs, human and animal bodies etc. also emit infrared energy.
+IR communication is used for short and medium distance applications.
+
+Principle of Working
+IR LEDs transmit digital (logical 1 and 0) data in the form of infrared light.
+Logical 1 is emitted by keeping IR LED ON and logical 0 by keeping it OFF.
+This ON and OFF sequence of data is collected by IR photodiode at receiver end.
+
+IR Communication types
+1) Point to point communication : In point to point communication, line of sight is required between transmitter and receiver devices.
+
+2) Diffuse communication : In diffuse communication, no need to keep transmitter and receiver in
+ straight line of sight. It can be done by reflecting or bouncing the transmitted signal from surfaces like wall, ceilings etc.
+
+ IR Communication using Modulation
+In modulation type of IR communication, IR light is modulated with carrier
+frequencies to get better distance available.
+
+Also, it provides better immunity to surrounding IR interferences. Generally,
+ TSOP series receivers are used to receive modulated IR light.

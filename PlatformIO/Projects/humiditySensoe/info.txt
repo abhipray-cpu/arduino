@@ -1,0 +1,10 @@
+DHT(humidity and temperature sensor)This is used to measure the humidity and sensor.
+Pinout for this sensor:(Left to Right)
+1)signal
+2)vcc
+3)gnd
+
+note never power smd rgb with other sensor from uno as it will overload the board beacuase the smdd consume much power therfore
+power it(smd rgb) seprately use rgb led
+
+the led can't be controlled via same board since it cosumes much power a lower power led can be used

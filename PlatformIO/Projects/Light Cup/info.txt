@@ -1,0 +1,18 @@
+Arduino KY-027 Magic Light Cup Module is a set of two boards
+, each one has a led and a mercury tilt switch. Using PWM 
+to drive the LEDs on each module you can achieve the effec
+t of light being "magically" transferred 
+from one module to the other when tilting them.
+
+
+
+KY-027 (A)	Arduino
+G	         GND
++	         5v
+S	         8
+L	         9
+KY-027 (B)	Arduino
+G	        GND
++	        5v
+S	        7
+L	        6

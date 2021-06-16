@@ -1,0 +1,10 @@
+Arduino KY-032 obstacle avoidance sensor is a distance-adjustable
+, infrared proximity sensor designed for wheeled robots. Also known as AD-032.
+
+The sensor detection distance ranges from 2cm to 40cm, it can be adjusted by turning
+ the potentiometer knob. The operating voltage is 3.3V-5V so it is suitable for a variety 
+ of microcontrollers like Arduino, ESP32, Teensy, ESP8266, Raspberry Pi, and others.
+
+It has strong adaptability to ambient light and it is fairly accurate to sense changes in the surrounding environment.
+
+same object detection

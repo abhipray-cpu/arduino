@@ -1,0 +1,14 @@
+So a buzzer is used to make a buzz sound and there are two kind of buzzers one is active and other is passive.
+Let's see the difference between the two:
+An active buzzer generates the sound itself.
+ You basically just turn it on or off. A passive 
+ buzzer needs a signal source that provides the sound
+  signal. To find out which is which you can measure
+   the resistance between both leads.
+
+
+1)passive Buuzer:we have to provide it with a signal in order to produce the sound
+
+so a major difference between the two is
+1)Active :gaandphaad awaaz nikalti hai but ek hi awaaz nikal skta hai
+2)Passive:less loud as compared to the active but sound can be varrried by chaning the signal

@@ -1,0 +1,20 @@
+so laser has three connections
++5v
+gnd
+digital pin
+
+and hers the source code for led blink:
+
+#define LaserPin 8
+
+
+void setup ()
+{
+   pinMode (LaserPin, OUTPUT); 
+}
+void loop () {
+   digitalWrite (LaserPin, HIGH); 
+   delay (1000); 
+   digitalWrite (LaserPin, LOW); 
+   delay (1000);
+}

@@ -1,0 +1,21 @@
+DS18B20 Temperature Module: The temperature module is 
+used to sense the temperature at a much accurate level 
+than the other temperature sensors. The temperature module
+ consists of a one wire temperature sensor (DS18B20) 
+ also known as (Dallas). This module can be used with
+  any if the microcontroller like raspberry pi and 
+  Arduino but we are using the Arduino. The temperature
+   module has wide range accuracy. It is accurate up
+    to ± 0.5 ᴼC over the range of -10 ᴼC to +85 ᴼC.
+
+    You can locate these sensors at a much larger distance from your Arduino,
+     almost 100 meter away from your Arduino. 
+     If you will use this sensor alone, then you will have
+      to use a 5 K ohm pull up resistor but in our module you 
+      do not need to use it. It has built in pull up resistor in
+       it.It has a resolution of 12 bit. It gets powers up in a
+        low power idle state. To measure the temperature and to 
+        do the A to D conversion, it should get a convert T [ 44h ] c
+        ommand from the master. After the conversion, the data will 
+        be stored in the 2-byte temperature register and the sensor
+         will return to idle state.

@@ -1,0 +1,5 @@
+Commercial fire safety devices are advanced with a lot of complex circuitry.
+ If you want to implement a DIY Fire or Flame detection application, then this project might be helpful.
+
+Warning: This project is just to give you an idea on how to implement a
+ simple Flame Sensor using Arduino Platform and we do not guarantee its commercial applications.

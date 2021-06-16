@@ -1,0 +1,5 @@
+arduino     ultrasonic      bt module
+tx                               rx              
+rx                               tx
+digital9      echo
+digital10     trig

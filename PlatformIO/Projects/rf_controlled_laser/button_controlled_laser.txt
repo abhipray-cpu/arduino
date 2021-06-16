@@ -1,0 +1,29 @@
+we will be contolling the laser module with the push button
+input pushbutton 7
+output laser 4
+
+here is the code to control  the laser note the laser is on until you press the button
+in case you want to on the laser on pressing the button just inverse the conditions:
+
+#include<arduino.h>
+int inPin = 7;
+int laser =3;   // choose the input pin (for a pushbutton)
+int val = 0;     // variable for reading the pin status
+
+void setup() {
+  pinMode(inPin, INPUT);
+  pinMode(laser,OUTPUT);    // declare pushbutton as input
+  Serial.begin(9600);
+}
+
+void loop(){
+  val = digitalRead(inPin);  // read input value
+  if (val == HIGH) {         // check if the input is HIGH (button released)
+    digitalWrite(laser,HIGH);
+    delay(2000);  // turn LED OFF
+  } 
+  else {
+     digitalWrite(laser,LOW);  // turn LED ON
+     delay(2000);
+   }
+}

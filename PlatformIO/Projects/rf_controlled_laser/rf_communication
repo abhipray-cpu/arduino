@@ -1,0 +1,74 @@
+//Receiver code
+#include<Arduino.h>
+#include <VirtualWire.h>
+const int datain = 12;
+const int laser = 4; 
+void setup()
+{
+    vw_set_ptt_inverted(true);
+    vw_set_rx_pin(datain);
+    vw_setup(2000);
+    vw_rx_start();
+    pinMode(laser,OUTPUT);
+    Serial.begin(9600);
+}
+    void loop()
+{
+    uint8_t buf[VW_MAX_MESSAGE_LEN];
+    uint8_t buflen = VW_MAX_MESSAGE_LEN; 
+ 
+    if (vw_get_message(buf, &buflen))
+    {
+      if(buf[0]=='1')
+      {  
+       Serial.print("Yes the button is pushed");
+       digitalWrite(laser,LOW);//switching the laser on
+       delay(4000);
+      }  
+      if(buf[0]=='0')
+      {
+       Serial.print("No the button is not pushed");
+       digitalWrite(laser,HIGH);//switching the laser off
+       delay(4000);//delay of 4 seconds
+      }
+    }
+}
+
+
+
+
+
+
+Transmitter code with virtualWire library
+
+#include <VirtualWire.h>
+#include<Arduino.h>
+const int button = 9;
+char *data;
+void setup() 
+{
+  pinMode(button,INPUT);
+  vw_set_ptt_inverted(true);
+  vw_set_tx_pin(12);
+  vw_setup(4000);
+}
+
+void loop()
+{  int val=digitalRead(button);
+  if(val == 0)
+  {
+         data="1";
+  vw_send((uint8_t *)data, strlen(data));
+  vw_wait_tx();
+  delay(2000);
+  }
+  else
+  {
+         
+  data="0";
+  vw_send((uint8_t *)data, strlen(data));
+  vw_wait_tx();
+  delay(2000);
+}
+  }
+ 

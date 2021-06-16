@@ -1,0 +1,3 @@
+Arduino KY-017 mercury tilt switch module, it uses a small mercury ball that completes the circuit when you tilt the module. 
+This module consists of a mercury switch, a 680Ω resistor and a LED that will light up when tilt is detected. The mercury ball
+ will open/close the circuit when the module is rotated.
