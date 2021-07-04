@@ -1,4 +1,3 @@
-//transmitter code
 #include<SPI.h>
 #include<RF24.h>
 #include<nRF24L01.h>
@@ -30,7 +29,10 @@ void setup()
     Serial.println("Could not find a valid MPU6050 sensor, check wiring!");
     delay(500);
   }
+
+  
   radio.begin();
+
   
   //set the address
   radio.openWritingPipe(address);
@@ -52,14 +54,17 @@ void loop()
 
  //Output
  Serial.print(" Pitch = ");
- Serial.print(pitch);
+ Serial.println(pitch);
  Serial.print(" Roll = ");
- Serial.print(roll);
+ Serial.println(roll);
  send_data.pitch=pitch;
  send_data.roll=roll;
- radio.write(&send_data, sizeof(Data));
- 
-  
-  
-  
+ if((radio.write(&send_data, sizeof(Data))))
+ {
+  Serial.println("Mja avigayo bapu");
+  }
+  else
+  {
+    Serial.println("Iski maa ka bhosda");
+    }
 }
