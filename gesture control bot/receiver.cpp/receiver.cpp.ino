@@ -34,7 +34,7 @@ pinMode(MotorA1, OUTPUT);
 pinMode(MotorA2, OUTPUT);
 pinMode(MotorB1, OUTPUT);
 pinMode(MotorB2, OUTPUT);
-for(int i=0;i<=10;i++)
+for(int i=0;i<=100;i++)
 {
    digitalWrite(MotorA1, HIGH);
   digitalWrite(MotorA2, LOW);
@@ -57,17 +57,29 @@ while(radio.available()) {
     Serial.print("Roll");
     Serial.println(receive_data.roll);
      
- if(receive_data.pitch < -35) {   //left
- Serial.print("LEFT");
+ if(receive_data.pitch < -35) {   //backward
+
+  Serial.println("BACKWARD");
   digitalWrite(MotorA1, LOW);
   digitalWrite(MotorA2, HIGH);
+  digitalWrite(MotorB1, HIGH);
+  digitalWrite(MotorB2, LOW);
+  analogWrite(ENA, 150);
+  analogWrite(ENB, 150);
+  
+
+  
+}else if(receive_data.pitch > 30) { //forward
+    Serial.print("FORWARD");
+  digitalWrite(MotorA1, HIGH);
+  digitalWrite(MotorA2, LOW);
   digitalWrite(MotorB1, LOW);
   digitalWrite(MotorB2, HIGH);
   analogWrite(ENA, 150);
   analogWrite(ENB, 150);
-delay(10);
   
-}else if(receive_data.pitch > 30) { //right
+ 
+} else if(receive_data.roll > 30){  //right
   Serial.print("RIGHT");
  digitalWrite(MotorA1, HIGH);
   digitalWrite(MotorA2, LOW);
@@ -75,26 +87,16 @@ delay(10);
   digitalWrite(MotorB2, LOW);
   analogWrite(ENA, 150);
   analogWrite(ENB, 150);
-  delay(10);
-} else if(receive_data.roll > 30){  //forward
-   Serial.print("FORWARD");
-  digitalWrite(MotorA1, HIGH);
-  digitalWrite(MotorA2, LOW);
+  
+}
+else if(receive_data.roll < -35){  //left
+ Serial.print("LEFT");
+  digitalWrite(MotorA1, LOW);
+  digitalWrite(MotorA2, HIGH);
   digitalWrite(MotorB1, LOW);
   digitalWrite(MotorB2, HIGH);
   analogWrite(ENA, 150);
   analogWrite(ENB, 150);
-  delay(10);
-}
-else if(receive_data.roll < -35){  //backward
-Serial.println("BACKWARD");
-  digitalWrite(MotorA1, LOW);
-  digitalWrite(MotorA2, HIGH);
-  digitalWrite(MotorB1, HIGH);
-  digitalWrite(MotorB2, LOW);
-  analogWrite(ENA, 150);
-  analogWrite(ENB, 150);
-  delay(10);
 }
 //STOP
 else {
