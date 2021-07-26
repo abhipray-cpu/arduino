@@ -34,7 +34,7 @@ pinMode(MotorA1, OUTPUT);
 pinMode(MotorA2, OUTPUT);
 pinMode(MotorB1, OUTPUT);
 pinMode(MotorB2, OUTPUT);
-for(int i=0;i<=100;i++)
+for(int i=0;i<=1000;i++)
 {
    digitalWrite(MotorA1, HIGH);
   digitalWrite(MotorA2, LOW);
@@ -42,7 +42,7 @@ for(int i=0;i<=100;i++)
   digitalWrite(MotorB2, LOW);
   analogWrite(ENA, 150);
   analogWrite(ENB, 150);
-  delay(10);
+  
   }
 }
 

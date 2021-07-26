@@ -15,17 +15,17 @@ encoderr9 controls the arm motors of light robot arm
 #define DT1 52
 #define SW1 53
 
-#define CLK2 23
-#define DT2 25
-#define SW2 24
+#define CLK2 48
+#define DT2 49
+#define SW2 50
 
 #define CLK3 45
 #define DT3 46
 #define SW3 47
 
-#define CLK4 42
-#define DT4 43
-#define SW4 44
+#define CLK4 22
+#define DT4 24
+#define SW4 26
 
 #define CLK5 39
 #define DT5 40
@@ -626,7 +626,9 @@ void encoder7()
     Serial.print(currentDir8);
     Serial.print(" | Counter8: ");
     Serial.println(counter8);
-    myServo8.write(counter8);
+    
+    myServo9.write(counter8);
+    myServo10.write(counter8 );
     
   }
 
@@ -682,8 +684,7 @@ void encoder9()
     Serial.print(currentDir9);
     Serial.print(" | Counter9: ");
     Serial.println(counter9);
-    myServo9.write(counter9);
-    myServo10.write(counter9);
+    myServo8.write(counter9);
   }
 
   // Remember last CLK state

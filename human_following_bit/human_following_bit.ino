@@ -64,15 +64,15 @@ void loop()
    Serial.println(left_val);
    
 
- if(left_val == 0 && right_val ==0) //both left and right IR sensors are active in this case we will check for the conditions
+ if(left_val == 1 && right_val ==1) //both left and right IR sensors are active in this case we will check for the conditions
  {
-  if(distance > 0  && distance < 10)
+  if(distance > 0  && distance < 5)
   {
     Serial.println("BACKWARD");
     backward();
     delay(500);
     }
-    else if(distance > 10 && distance < 20)
+    else if(distance > 5 && distance < 20)
     {
       Serial.println("FORWARD");
       forward();
@@ -87,14 +87,15 @@ void loop()
   else if(left_val ==0 && right_val == 1) //left is active and right is inactive
 {
   Serial.println("Left");
-  left();
+  right();
  
   delay(500);
 }
 else if(left_val ==1 && right_val == 0) //left is inactive and right is active
 {
   Serial.println("Right");
-  right();
+  left();
+  delay(500);
  
   }
   else
@@ -107,24 +108,24 @@ else if(left_val ==1 && right_val == 0) //left is inactive and right is active
 
 void forward()  //forward
 {
-  Motor1.setSpeed(250);
+  Motor1.setSpeed(150);
   Motor1.run(FORWARD);
-  Motor2.setSpeed(250);
+  Motor2.setSpeed(150);
   Motor2.run(FORWARD);
-  Motor3.setSpeed(250);
+  Motor3.setSpeed(150);
   Motor3.run(FORWARD);
-  Motor4.setSpeed(250);
+  Motor4.setSpeed(150);
   Motor4.run(FORWARD);
   }
 void backward()//backward
 {
-   Motor1.setSpeed(250);
+   Motor1.setSpeed(150);
   Motor1.run(BACKWARD);
-  Motor2.setSpeed(250);
+  Motor2.setSpeed(150);
   Motor2.run(BACKWARD);
-  Motor3.setSpeed(250);
+  Motor3.setSpeed(150);
   Motor3.run(BACKWARD);
-  Motor4.setSpeed(250);
+  Motor4.setSpeed(150);
   Motor4.run(BACKWARD);
   }
 void left() //left

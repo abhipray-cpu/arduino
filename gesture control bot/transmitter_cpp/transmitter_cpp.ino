@@ -23,6 +23,7 @@ void setup()
   Serial.begin(9600);
 
   Serial.println("Initialize MPU6050");
+  radio.
 
   while(!mpu.begin(MPU6050_SCALE_2000DPS, MPU6050_RANGE_2G))
   {
