@@ -96,7 +96,6 @@ void encoder1()
   if (Firebase.getInt(firebaseData, "/motor1")){
     Serial.print("The value written to Motor1:");
     Serial.println(firebaseData.intData());
-     myServo1.write(firebaseData.intData());
     
   }
   delay(100);
@@ -107,7 +106,6 @@ void encoder2()
   if (Firebase.getInt(firebaseData, "/motor2")){
     Serial.print("The value written to Motor2:");
     Serial.println(firebaseData.intData());
-     myServo2.write(firebaseData.intData());
     
   }
   delay(100);
@@ -118,7 +116,6 @@ void encoder3()
   if (Firebase.getInt(firebaseData, "/motor3")){
     Serial.print("The value written to Motor3:");
     Serial.println(firebaseData.intData());
-     myServo3.write(firebaseData.intData());
     
   }
   delay(100);
@@ -129,7 +126,6 @@ void encoder4()
   if (Firebase.getInt(firebaseData, "/motor4")){
     Serial.print("The value written to Motor4:");
     Serial.println(firebaseData.intData());
-     myServo4.write(firebaseData.intData());
     
   }
   delay(100);
@@ -140,7 +136,6 @@ void encoder5()
   if (Firebase.getInt(firebaseData, "/motor5")){
     Serial.print("The value written to Motor5:");
     Serial.println(firebaseData.intData());
-     myServo5.write(firebaseData.intData());
     
   }
   delay(100);
@@ -151,7 +146,6 @@ void encoder6()
  if (Firebase.getInt(firebaseData, "/motor6")){
   Serial.print("The value written to Motor6:");
     Serial.println(firebaseData.intData());
-     myServo6.write(firebaseData.intData());
     
   }
   delay(100); 
@@ -162,7 +156,6 @@ void encoder6()
   if (Firebase.getInt(firebaseData, "/motor7")){
     Serial.print("The value written to Motor7:");
     Serial.println(firebaseData.intData());
-     myServo7.write(firebaseData.intData());
     
   }
   delay(100);
@@ -173,7 +166,6 @@ void encoder8()
  if (Firebase.getInt(firebaseData, "/motor8")){
   Serial.print("The value written to Motor8:");
     Serial.println(firebaseData.intData());
-     myServo8.write(firebaseData.intData());
     
   }
   delay(100); 
@@ -184,7 +176,6 @@ void encoder8()
   if (Firebase.getInt(firebaseData, "/motor9")){
     Serial.print("The value written to Motor9:");
     Serial.println(firebaseData.intData());
-     myServo9.write(firebaseData.intData());
   
   }
   delay(100);
@@ -195,7 +186,6 @@ void encoder10()
   if (Firebase.getInt(firebaseData, "/motor10")){
     Serial.print("The value written to Motor10:");
     Serial.println(firebaseData.intData());
-     myServo10.write(firebaseData.intData());
    
   }
   delay(100);
