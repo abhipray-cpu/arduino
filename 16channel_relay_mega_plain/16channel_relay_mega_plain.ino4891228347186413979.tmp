@@ -1,0 +1,345 @@
+#include<Arduino.h>
+#define relay1 53
+#define relay2 52
+#define relay3 51
+#define relay4 50
+#define relay5 49
+#define relay6 48
+#define relay7 47
+#define relay8 46
+#define relay9 45
+#define relay10 44
+#define relay11 43
+#define relay12 42
+#define relay13 41
+#define relay14 40
+#define relay15 39
+#define relay16 38
+#define sensor1 37  //linear hall sensor
+void setup() {
+  // put your setup code here, to run once:
+
+Serial.begin(9600);
+pinMode(relay1,OUTPUT);
+pinMode(relay2,OUTPUT);
+pinMode(relay3,OUTPUT);
+pinMode(relay4,OUTPUT);
+pinMode(relay5,OUTPUT);
+pinMode(relay6,OUTPUT);
+pinMode(relay7,OUTPUT);
+pinMode(relay8,OUTPUT);
+pinMode(relay9,OUTPUT);
+pinMode(relay10,OUTPUT);
+pinMode(relay11,OUTPUT);
+pinMode(relay12,OUTPUT);
+pinMode(relay13,OUTPUT);
+pinMode(relay14,OUTPUT);
+pinMode(relay15,OUTPUT);
+pinMode(relay16,OUTPUT);
+pinMode(sensor1,INPUT);
+for(int i=0;i<=100;i++)
+{
+  delay(10);
+  }
+  Serial.println("TURNING ON ALL RELAY CHANNELS");
+  digitalWrite(relay1,HIGH);
+  digitalWrite(relay2,HIGH);
+  digitalWrite(relay3,HIGH);
+  digitalWrite(relay4,HIGH);
+  digitalWrite(relay5,HIGH);
+  digitalWrite(relay6,HIGH);
+  digitalWrite(relay7,HIGH);
+  digitalWrite(relay8,HIGH);
+  digitalWrite(relay9,HIGH);
+  digitalWrite(relay10,HIGH);
+  digitalWrite(relay11,HIGH);
+  digitalWrite(relay12,HIGH);
+  digitalWrite(relay13,HIGH);
+  digitalWrite(relay14,HIGH);
+  digitalWrite(relay15,HIGH);
+  digitalWrite(relay16,HIGH);
+  delay(10000);
+  Serial.println("Testing all the relay channels");
+  for(int i=0;i<=100;i++)
+  {
+    Serial.println("Switching off relay1");
+    digitalWrite(relay1,LOW);
+    delay(100);
+    Serial.println("Switching off relay2");
+    digitalWrite(relay2,LOW);
+    delay(100);
+    Serial.println("Switching off relay3");
+    digitalWrite(relay3,LOW);
+    delay(100);
+    Serial.println("Switching off relay4");
+    digitalWrite(relay4,LOW);
+    delay(100);
+    Serial.println("Switching off relay5");
+    digitalWrite(relay5,LOW);
+    delay(100);
+    Serial.println("Switching off relay6");
+    digitalWrite(relay6,LOW);
+    delay(100);
+    Serial.println("Switching off relay7");
+    digitalWrite(relay7,LOW);
+    delay(100);
+    Serial.println("Switching off relay8");
+    digitalWrite(relay8,LOW);
+    delay(100);
+    Serial.println("Switching off relay9");
+    digitalWrite(relay9,LOW);
+    delay(100);
+    Serial.println("Switching off relay10");
+    digitalWrite(relay10,LOW);
+    delay(100);
+    Serial.println("Switching off relay11");
+    digitalWrite(relay11,LOW);
+    delay(100);
+    Serial.println("Switching off relay12");
+    digitalWrite(relay12,LOW);
+    delay(100);
+    Serial.println("Switching off relay13");
+    digitalWrite(relay13,LOW);
+    delay(100);
+    Serial.println("Switching off relay14");
+    digitalWrite(relay14,LOW);
+    delay(100);
+    Serial.println("Switching off relay15");
+    digitalWrite(relay15,LOW);
+    delay(100);
+    Serial.println("Switching off relay16");
+    digitalWrite(relay16,LOW);
+    delay(100);
+    Serial.println("Switching on relay1");
+    digitalWrite(relay1,HIGH);
+    delay(100);
+    Serial.println("Switching on relay2");
+    digitalWrite(relay2,HIGH);
+    delay(100);
+    Serial.println("Switching on relay3");
+    digitalWrite(relay3,HIGH);
+    delay(100);
+    Serial.println("Switching on relay4");
+    digitalWrite(relay4,HIGH);
+    delay(100);
+    Serial.println("Switching on relay5");
+    digitalWrite(relay5,HIGH);
+    delay(100);
+    Serial.println("Switching on relay6");
+    digitalWrite(relay6,HIGH);
+    delay(100);
+    Serial.println("Switching on relay7");
+    digitalWrite(relay7,HIGH);
+    delay(100);
+    Serial.println("Switching on relay8");
+    digitalWrite(relay8,HIGH);
+    delay(100);
+    Serial.println("Switching on relay9");
+    digitalWrite(relay9,HIGH);
+    delay(100);
+    Serial.println("Switching on relay10");
+    digitalWrite(relay10,HIGH);
+    delay(100);
+    Serial.println("Switching on relay11");
+    digitalWrite(relay11,HIGH);
+    delay(100);
+    Serial.println("Switching on relay12");
+    digitalWrite(relay12,HIGH);
+    delay(100);
+    Serial.println("Switching on relay13");
+    digitalWrite(relay13,HIGH);
+    delay(100);
+    Serial.println("Switching on relay14");
+    digitalWrite(relay14,HIGH);
+    delay(100);
+    Serial.println("Switching on relay15");
+    digitalWrite(relay15,HIGH);
+    delay(100);
+    Serial.println("Switching on relay16");
+    digitalWrite(relay16,HIGH);
+    delay(100);
+    }
+}
+
+void loop() {
+   int val1=value1();
+   control_relay1(val1);
+
+}
+int value1()
+{
+  int val;
+  val=digitalRead(sensor1);
+  Serial.println(val);
+  if(val == HIGH)
+  {
+    return 1;}
+    else if(val == LOW)
+    {
+      return 0;}
+  }
+
+void control_relay1(int val)
+{
+  if(val == 0)
+  {
+    digitalWrite(relay1,LOW);
+    }
+    else if(val == 1)
+    {
+      digitalWrite(relay1,HIGH);
+      }
+  }
+  void control_relay2(int val)
+{
+  if(val == 0)
+  {
+    digitalWrite(relay2,LOW);
+    }
+    else if(val == 1)
+    {
+      digitalWrite(relay2,HIGH);
+      }
+  }
+  void control_relay3(int val)
+{if(val == 0)
+  {
+    digitalWrite(relay3,LOW);
+    }
+    else if(val == 1)
+    {
+      digitalWrite(relay3,HIGH);
+      }
+  }
+  void control_relay4(int val)
+{if(val == 0)
+  {
+    digitalWrite(relay4,LOW);
+    }
+    else if(val == 1)
+    {
+      digitalWrite(relay4,HIGH);
+      }
+  }
+  void control_relay5(int val)
+{
+  if(val == 0)
+  {
+    digitalWrite(relay5,LOW);
+    }
+    else if(val == 1)
+    {
+      digitalWrite(relay5,HIGH);
+      }
+  }
+  void control_relay6(int val)
+{if(val == 0)
+  {
+    digitalWrite(relay6,LOW);
+    }
+    else if(val == 1)
+    {
+      digitalWrite(relay6,HIGH);
+      }
+  }
+  void control_relay7(int val)
+{if(val == 0)
+  {
+    digitalWrite(relay7,LOW);
+    }
+    else if(val == 1)
+    {
+      digitalWrite(relay7,HIGH);
+      }
+  }
+  void control_relay8(int val)
+{if(val == 0)
+  {
+    digitalWrite(relay8,LOW);
+    }
+    else if(val == 1)
+    {
+      digitalWrite(relay8,HIGH);
+      }
+  }
+  void control_relay9(int val)
+{
+  if(val == 0)
+  {
+    digitalWrite(relay9,LOW);
+    }
+    else if(val == 1)
+    {
+      digitalWrite(relay9,HIGH);
+      }
+  }
+  void control_relay10(int val)
+{if(val == 0)
+  {
+    digitalWrite(relay10,LOW);
+    }
+    else if(val == 1)
+    {
+      digitalWrite(relay10,HIGH);
+      }
+  }
+  void control_relay11(int val)
+{if(val == 0)
+  {
+    digitalWrite(relay11,LOW);
+    }
+    else if(val == 1)
+    {
+      digitalWrite(relay11,HIGH);
+      }
+  }
+  void control_relay12(int val)
+{if(val == 0)
+  {
+    digitalWrite(relay12,LOW);
+    }
+    else if(val == 1)
+    {
+      digitalWrite(relay12,HIGH);
+      }
+  }
+  void control_relay13(int val)
+{if(val == 0)
+  {
+    digitalWrite(relay13,LOW);
+    }
+    else if(val == 1)
+    {
+      digitalWrite(relay13,HIGH);
+      }
+  }
+  void control_relay14(int val)
+{if(val == 0)
+  {
+    digitalWrite(relay14,LOW);
+    }
+    else if(val == 1)
+    {
+      digitalWrite(relay14,HIGH);
+      }
+  }
+  void control_relay15(int val)
+{if(val == 0)
+  {
+    digitalWrite(relay15,LOW);
+    }
+    else if(val == 1)
+    {
+      digitalWrite(relay15,HIGH);
+      }
+  }
+  void control_relay16(int val)
+{if(val == 0)
+  {
+    digitalWrite(relay16,LOW);
+    }
+    else if(val == 1)
+    {
+      digitalWrite(relay16,HIGH);
+      }
+  }

@@ -65,14 +65,14 @@ void setup()
 // do not use pin 11 to attach the motor as it breaks the connection
     myServo1.attach(53);
     myServo2.attach(52);
-    myServo3.attach(50);
-    myServo4.attach(49);
-    myServo5.attach(48);
-    myServo6.attach(47);
-    myServo7.attach(46);
-    myServo8.attach(45);
-    myServo9.attach(44);
-    myServo10.attach(43);
+    myServo3.attach(51);
+    myServo4.attach(50);
+    myServo5.attach(49);
+    myServo6.attach(48);
+    myServo7.attach(47);
+    myServo8.attach(46);
+    myServo9.attach(45);
+    myServo10.attach(44);
    
 }
 void loop()

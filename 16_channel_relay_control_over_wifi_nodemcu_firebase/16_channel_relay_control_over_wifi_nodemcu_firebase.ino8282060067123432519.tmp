@@ -9,17 +9,18 @@
 #define relay2 3
 #define relay3 4
 #define relay4 5
-#define relay5 9
-#define relay6 10
-#define relay7 12
-#define relay8 13
-#define relay9 14
-#define relay10 15
-#define relay11 16
-#define relay12 17
-#define relay13 18
-#define relay14 19
-
+#define relay5 8
+#define relay6 47
+#define relay7 46
+#define relay8 45
+#define relay9 44
+#define relay10 43
+#define relay11 42
+#define relay12 41
+#define relay13 40
+#define relay14 39
+#define relay15 38
+#define relay16 37
 
  
 
@@ -42,8 +43,22 @@ void setup() {
    pinMode(relay12,OUTPUT);
    pinMode(relay13,OUTPUT);
    pinMode(relay14,OUTPUT);
- 
-  
+   pinMode(relay15,OUTPUT);
+   pinMode(relay16,OUTPUT);
+   digitalWrite(relay1,HIGH);
+   digitalWrite(relay2,HIGH);
+   digitalWrite(relay3,HIGH);
+   digitalWrite(relay4,HIGH);
+   digitalWrite(relay5,HIGH);
+   digitalWrite(relay6,HIGH);
+   digitalWrite(relay7,HIGH);
+   digitalWrite(relay8,HIGH);
+   digitalWrite(relay9,HIGH);
+   digitalWrite(relay10,HIGH);
+   digitalWrite(relay11,HIGH);
+   digitalWrite(relay12,HIGH);
+   digitalWrite(relay13,HIGH);
+   digitalWrite(relay14,HIGH);
   WiFi.begin(WIFI_SSID, WIFI_PASSWORD);
   Serial.print("Connecting to Wi-Fi");
   while (WiFi.status() != WL_CONNECTED)
@@ -58,20 +73,6 @@ void setup() {
    Serial.println();
 
    Firebase.begin(FIREBASE_HOST, FIREBASE_AUTH);
-   digitalWrite(2,HIGH);
-   digitalWrite(3,HIGH);
-   digitalWrite(4,HIGH);
-   digitalWrite(5,HIGH);
-   digitalWrite(9,HIGH);
-   digitalWrite(10,HIGH);
-   digitalWrite(12,HIGH);
-   digitalWrite(13,HIGH);
-   digitalWrite(14,HIGH);
-   digitalWrite(15,HIGH);
-   digitalWrite(16,HIGH);
-   digitalWrite(17,HIGH);
-   digitalWrite(18,HIGH);
-   digitalWrite(19,HIGH);
   
    
    
@@ -81,33 +82,19 @@ void setup() {
 
 void loop() {
  relay1_controller();
- delay(100);
  relay2_controller();
- delay(100);
  relay3_controller();
- delay(100);
  relay4_controller();
- delay(100);
  relay5_controller();
- delay(100);
  relay6_controller();
- delay(100);
  relay7_controller();
- delay(100);
  relay8_controller();
- delay(100);
  relay9_controller();
- delay(100);
  relay10_controller();
- delay(100);
  relay11_controller();
- delay(100);
  relay12_controller();
- delay(100);
  relay13_controller();
- delay(100);
  relay14_controller();
- delay(100);
 
 
 }
@@ -120,12 +107,10 @@ void relay1_controller()
     if(firebaseData.stringData() == "off")
     { 
       digitalWrite(relay1,LOW);
-      Serial.println("Relay1 is switched off");
       }
       else if(firebaseData.stringData() == "on")
       {
         digitalWrite(relay1,HIGH);
-        Serial.println("Relay1 is switched on");
         }
     
      }
@@ -139,12 +124,10 @@ void relay2_controller()
     if(firebaseData.stringData() == "off")
     { 
       digitalWrite(relay2,LOW);
-      Serial.println("Relay2 is switched off");
       }
       else if(firebaseData.stringData() == "on")
       {
         digitalWrite(relay2,HIGH);
-        Serial.println("Relay2 is switched on");
         }
     
      }
@@ -158,12 +141,10 @@ void relay3_controller()
     if(firebaseData.stringData() == "off")
     { 
       digitalWrite(relay3,LOW);
-      Serial.println("Relay3 is switched off");
       }
       else if(firebaseData.stringData() == "on")
       {
         digitalWrite(relay3,HIGH);
-        Serial.println("Relay3 is switched on");
         }
      
      }
@@ -177,12 +158,10 @@ void relay4_controller()
     if(firebaseData.stringData() == "off")
     { 
       digitalWrite(relay4,LOW);
-      Serial.println("Relay4 is switched off");
       }
       else if(firebaseData.stringData() == "on")
       {
         digitalWrite(relay4,HIGH);
-        Serial.println("Relay4 is switched on");
         }
     
      }
@@ -196,12 +175,10 @@ void relay5_controller()
     if(firebaseData.stringData() == "off")
     { 
       digitalWrite(relay5,LOW);
-      Serial.println("Relay5 is switched off");
       }
       else if(firebaseData.stringData() == "on")
       {
         digitalWrite(relay5,HIGH);
-        Serial.println("Relay5 is switched on");
         }
     
      }
@@ -215,12 +192,10 @@ void relay6_controller()
     if(firebaseData.stringData() == "off")
     { 
       digitalWrite(relay6,LOW);
-      Serial.println("Relay6 is switched off");
       }
       else if(firebaseData.stringData() == "on")
       {
         digitalWrite(relay6,HIGH);
-        Serial.println("Relay6 is switched on");
         }
      
      }
@@ -234,12 +209,10 @@ void relay7_controller()
     if(firebaseData.stringData() == "off")
     { 
       digitalWrite(relay7,LOW);
-      Serial.println("Relay7 is switched off");
       }
       else if(firebaseData.stringData() == "on")
       {
         digitalWrite(relay7,HIGH);
-        Serial.println("Relay7 is switched on");
         }
     
      }
@@ -253,12 +226,10 @@ void relay7_controller()
     if(firebaseData.stringData() == "off")
     { 
       digitalWrite(relay8,LOW);
-      Serial.println("Relay8 is switched off");
       }
       else if(firebaseData.stringData() == "on")
       {
         digitalWrite(relay8,HIGH);
-        Serial.println("Relay8 is switched on");
         }
    
      }
@@ -272,12 +243,10 @@ void relay7_controller()
     if(firebaseData.stringData() == "off")
     { 
       digitalWrite(relay9,LOW);
-      Serial.println("Relay9 is switched off");
       }
       else if(firebaseData.stringData() == "on")
       {
         digitalWrite(relay9,HIGH);
-        Serial.println("Relay9 is switched on");
         }
      
      }
@@ -291,12 +260,10 @@ void relay10_controller()
     if(firebaseData.stringData() == "off")
     { 
       digitalWrite(relay10,LOW);
-      Serial.println("Relay10 is switched off");
       }
       else if(firebaseData.stringData() == "on")
       {
         digitalWrite(relay10,HIGH);
-        Serial.println("Relay10 is switched on");
         }
    
      }
@@ -310,12 +277,10 @@ void relay11_controller()
     if(firebaseData.stringData() == "off")
     { 
       digitalWrite(relay11,LOW);
-      Serial.println("Relay11 is switched off");
       }
       else if(firebaseData.stringData() == "on")
       {
         digitalWrite(relay11,HIGH);
-        Serial.println("Relay11 is switched on");
         }
     
      }
@@ -329,12 +294,10 @@ void relay12_controller()
     if(firebaseData.stringData() == "off")
     { 
       digitalWrite(relay12,LOW);
-      Serial.println("Relay12 is switched off");
       }
       else if(firebaseData.stringData() == "on")
       {
         digitalWrite(relay12,HIGH);
-        Serial.println("Relay12 is switched on");
         }
      
      }
@@ -348,12 +311,10 @@ void relay13_controller()
     if(firebaseData.stringData() == "off")
     { 
       digitalWrite(relay13,LOW);
-      Serial.println("Relay13 is switched off");
       }
       else if(firebaseData.stringData() == "on")
       {
         digitalWrite(relay13,HIGH);
-        Serial.println("Relay13 is switched on");
         }
     
      }
@@ -367,12 +328,43 @@ void relay14_controller()
     if(firebaseData.stringData() == "off")
     { 
       digitalWrite(relay14,LOW);
-      Serial.println("Relay14 is switched off");
       }
       else if(firebaseData.stringData() == "on")
       {
         digitalWrite(relay14,HIGH);
-        Serial.println("Relay14 is switched off");
+        }
+    
+     }
+  }
+  void relay15_controller()
+{
+  if (Firebase.getString(firebaseData, "/relay15")){
+    Serial.print("State of relay15:");
+    Serial.println(firebaseData.stringData());
+    if(firebaseData.stringData() == "off")
+    { 
+      digitalWrite(relay15,LOW);
+      }
+      else if(firebaseData.stringData() == "on")
+      {
+        digitalWrite(relay15,HIGH);
+        }
+    
+     }
+  }
+
+void relay16_controller()
+{
+  if (Firebase.getString(firebaseData, "/relay16")){
+    Serial.print("State of relay16:");
+    Serial.println(firebaseData.stringData());
+    if(firebaseData.stringData() == "off")
+    { 
+      digitalWrite(relay16,LOW);
+      }
+      else if(firebaseData.stringData() == "on")
+      {
+        digitalWrite(relay16,HIGH);
         }
     
      }
