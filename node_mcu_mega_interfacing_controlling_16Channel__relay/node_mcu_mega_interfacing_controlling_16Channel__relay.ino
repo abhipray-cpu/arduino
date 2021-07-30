@@ -1,6 +1,6 @@
 #include<FirebaseESP8266.h>
 #include<ESP8266WiFi.h>
-#include<Servo.h>
+
 #define WIFI_SSID "STARNET_A"
 #define WIFI_PASSWORD "kamalanita1@"
 #define FIREBASE_AUTH "J7zZWSjFYt1VW2h3Y6SgGz8JW7okCe1qrYYEnEe0"
@@ -62,18 +62,18 @@ void loop() {
 // these 16 functions are used to control 16 channels of our relay module
 void relay1_controller()
 {
-  if (Firebase.getString(firebaseData, "/relay1")){
+  if (Firebase.getInt(firebaseData, "/relay1")){
     Serial.print("State of relay1:");
-    Serial.println(firebaseData.stringData());
+    Serial.println(firebaseData.intData());
     
      }
   }
 
 void relay2_controller()
 {
-  if (Firebase.getString(firebaseData, "/relay2")){
+  if (Firebase.getInt(firebaseData, "/relay2")){
     Serial.print("State of relay2:");
-    Serial.println(firebaseData.stringData());
+    Serial.println(firebaseData.intData());
    
     
      }
@@ -81,9 +81,9 @@ void relay2_controller()
 
 void relay3_controller()
 {
-  if (Firebase.getString(firebaseData, "/relay3")){
+  if (Firebase.getInt(firebaseData, "/relay3")){
     Serial.print("State of relay3:");
-    Serial.println(firebaseData.stringData());
+    Serial.println(firebaseData.intData());
   
      
      }
@@ -91,9 +91,9 @@ void relay3_controller()
 
 void relay4_controller()
 {
-  if (Firebase.getString(firebaseData, "/relay4")){
+  if (Firebase.getInt(firebaseData, "/relay4")){
     Serial.print("State of relay4:");
-    Serial.println(firebaseData.stringData());
+    Serial.println(firebaseData.intData());
     
     
      }
@@ -101,9 +101,9 @@ void relay4_controller()
 
 void relay5_controller()
 {
-  if (Firebase.getString(firebaseData, "/relay5")){
+  if (Firebase.getInt(firebaseData, "/relay5")){
     Serial.print("State of relay5:");
-    Serial.println(firebaseData.stringData());
+    Serial.println(firebaseData.intData());
    
     
      }
@@ -111,9 +111,9 @@ void relay5_controller()
 
 void relay6_controller()
 {
-  if (Firebase.getString(firebaseData, "/relay6")){
+  if (Firebase.getInt(firebaseData, "/relay6")){
     Serial.print("State of relay6:");
-    Serial.println(firebaseData.stringData());
+    Serial.println(firebaseData.intData());
     
      
      }
@@ -121,9 +121,9 @@ void relay6_controller()
 
 void relay7_controller()
 {
-  if (Firebase.getString(firebaseData, "/relay7")){
+  if (Firebase.getInt(firebaseData, "/relay7")){
     Serial.print("State of relay7:");
-    Serial.println(firebaseData.stringData());
+    Serial.println(firebaseData.intData());
    
     
      }
@@ -131,9 +131,9 @@ void relay7_controller()
 
  void relay8_controller()
 {
-  if (Firebase.getString(firebaseData, "/relay8")){
+  if (Firebase.getInt(firebaseData, "/relay8")){
     Serial.print("State of relay8:");
-    Serial.println(firebaseData.stringData());
+    Serial.println(firebaseData.intData());
     
    
      }
@@ -141,9 +141,9 @@ void relay7_controller()
 
  void relay9_controller()
 {
-  if (Firebase.getString(firebaseData, "/relay9")){
+  if (Firebase.getInt(firebaseData, "/relay9")){
     Serial.print("State of relay9:");
-    Serial.println(firebaseData.stringData());
+    Serial.println(firebaseData.intData());
   
      
      }
@@ -151,9 +151,9 @@ void relay7_controller()
 
 void relay10_controller()
 {
-  if (Firebase.getString(firebaseData, "/relay10")){
+  if (Firebase.getInt(firebaseData, "/relay10")){
     Serial.print("State of relay10:");
-    Serial.println(firebaseData.stringData());
+    Serial.println(firebaseData.intData());
    
    
      }
@@ -161,9 +161,9 @@ void relay10_controller()
 
 void relay11_controller()
 {
-  if (Firebase.getString(firebaseData, "/relay11")){
+  if (Firebase.getInt(firebaseData, "/relay11")){
     Serial.print("State of relay11:");
-    Serial.println(firebaseData.stringData());
+    Serial.println(firebaseData.intData());
    
     
      }
@@ -171,9 +171,9 @@ void relay11_controller()
 
 void relay12_controller()
 {
-  if (Firebase.getString(firebaseData, "/relay12")){
+  if (Firebase.getInt(firebaseData, "/relay12")){
     Serial.print("State of relay12:");
-    Serial.println(firebaseData.stringData());
+    Serial.println(firebaseData.intData());
     
      
      }
@@ -181,9 +181,9 @@ void relay12_controller()
 
 void relay13_controller()
 {
-  if (Firebase.getString(firebaseData, "/relay13")){
+  if (Firebase.getInt(firebaseData, "/relay13")){
     Serial.print("State of relay13:");
-    Serial.println(firebaseData.stringData());
+    Serial.println(firebaseData.intData());
    
     
      }
@@ -191,9 +191,9 @@ void relay13_controller()
 
 void relay14_controller()
 {
-  if (Firebase.getString(firebaseData, "/relay14")){
+  if (Firebase.getInt(firebaseData, "/relay14")){
     Serial.print("State of relay14:");
-    Serial.println(firebaseData.stringData());
+    Serial.println(firebaseData.intData());
     
     
      }
@@ -201,18 +201,18 @@ void relay14_controller()
 
   void relay15_controller()
 {
-  if (Firebase.getString(firebaseData, "/relay15")){
+  if (Firebase.getInt(firebaseData, "/relay15")){
     Serial.print("State of relay15:");
-    Serial.println(firebaseData.stringData());
+    Serial.println(firebaseData.intData());
     
     
      }
   }
   void relay16_controller()
 {
-  if (Firebase.getString(firebaseData, "/relay16")){
+  if (Firebase.getInt(firebaseData, "/relay16")){
     Serial.print("State of relay16:");
-    Serial.println(firebaseData.stringData());
+    Serial.println(firebaseData.intData());
     
     
      }
