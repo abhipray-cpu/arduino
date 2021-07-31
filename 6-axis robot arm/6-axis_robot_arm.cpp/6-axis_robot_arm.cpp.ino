@@ -5,9 +5,9 @@ encoder3 controlls the level 3 motor of heavr arm
 encoder4 controls the level 4 motor of heavy arm
 encoder5 controls the level 5 motor of heavy arm
 encoder6 contrls the level 6 motor of heavy arm
-encoder 7 controls the base motor of light robot arm
-encoder 8 controls the claw motor of light robot arm
-encoderr9 controls the arm motors of light robot arm
+encoder 7 controls the claw motor of light robot arm
+encoder 8 controls the arm motors of light robot arm
+encoderr9 controls the base motor of light robot arm
 */
 
 #include<Servo.h>
@@ -23,9 +23,9 @@ encoderr9 controls the arm motors of light robot arm
 #define DT3 46
 #define SW3 47
 
-#define CLK4 22
-#define DT4 24
-#define SW4 26
+#define CLK4 42
+#define DT4 43
+#define SW4 44
 
 #define CLK5 39
 #define DT5 40
@@ -116,22 +116,25 @@ Servo myServo10;
 
 void setup() {
   myServo1.attach(13);
-  myServo1.write(0);
   myServo2.attach(12);
-  myServo2.write(60);
   myServo3.attach(11);
-  myServo3.write(110);
   myServo4.attach(10);
-  myServo4.write(40);
   myServo5.attach(9);
-  myServo5.write(0);
   myServo6.attach(8);
-  myServo6.write(180);
   myServo7.attach(7);
-  myServo7.write(119);
   myServo8.attach(6);
   myServo9.attach(5);
   myServo10.attach(4);
+  myServo1.write(0);
+  myServo2.write(0);
+  myServo3.write(0);
+  myServo4.write(0);
+  myServo5.write(0);
+  myServo6.write(0);
+  myServo7.write(0);
+  myServo8.write(0);
+  myServo9.write(0);
+  myServo10.write(0);
   // Set encoder pins as inputs
   pinMode(CLK1,INPUT);
   pinMode(DT1,INPUT);
@@ -627,8 +630,8 @@ void encoder7()
     Serial.print(" | Counter8: ");
     Serial.println(counter8);
     
-    myServo9.write(counter8);
-    myServo10.write(counter8 );
+    myServo10.write(counter8);
+    myServo9.write(counter8 );
     
   }
 
