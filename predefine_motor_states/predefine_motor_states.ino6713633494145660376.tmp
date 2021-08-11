@@ -1,0 +1,112 @@
+#include<Servo.h>
+#define killpin 9 // Please ignore. This is only to activate ext power to transmitter
+#include "SPI.h"
+#include "TFT_22_ILI9225.h"
+#include "math.h"
+
+#define TFT_RST A4
+#define TFT_RS  A3
+#define TFT_CS  A5  // SS
+#define TFT_SDI A2  // MOSI
+#define TFT_CLK A1  // SCK
+#define TFT_LED 0   // 0 if wired to +5V directly
+
+#define TFT_BRIGHTNESS 200 // Initial brightness of TFT backlight (optional)
+
+#define ROTATE_ANGLE 10 // Angle in degrees to rotate the triangl
+#define RED COLOR_RED
+#define BLUE COLOR_BLUE
+
+// Use hardware SPI (faster - on Uno: 13-SCK, 12-MISO, 11-MOSI)
+TFT_22_ILI9225 tft = TFT_22_ILI9225(TFT_RST, TFT_RS, TFT_CS, TFT_SDI, TFT_CLK, TFT_LED);
+
+Servo myServo1;
+Servo myServo2;
+Servo myServo3;
+Servo myServo4;
+Servo myServo5;
+Servo myServo6;
+Servo myServo7;
+Servo myServo8;
+Servo myServo9;
+Servo myServo10;
+// Setup
+void setup() {
+  tft.begin();
+  Serial.begin(9600);
+  myServo1.attach(13);
+  myServo2.attach(13);
+  myServo3.attach(13);
+  myServo4.attach(13);
+  myServo5.attach(13);
+  myServo6.attach(13);
+  myServo7.attach(13);
+  myServo8.attach(13);
+  myServo9.attach(13);
+  myServo10.attach(13);
+}
+
+// Loop
+void loop()
+{
+     intro_ui()
+     delay(1000);
+}
+void intro_ui()
+{
+ tft.clear();
+  tft.setOrientation(1);
+  bitmap_test();
+  tft.setFont(Terminal12x16);
+  tft.drawText(30,80,"JAI SHREE RAM",COLOR_ORANGE);
+  delay(1000);
+  tft.clear();
+  tft.drawText(50,10,"Say with me");
+  tft.drawText(50,30,"ROOPA MC");
+  tft.drawText(50,50,"REMYA MC");
+  tft.drawText(50,70,"HOD MC");
+  tft.drawText(50,90,"NIE MC");
+  tft.drawText(50,110,"VTU MC");
+  delay(1000);
+  tft.clear();
+   tft.drawText(70,20,"STATE");
+  tft.drawText(70,60,"OF");
+  tft.drawText(70,100,"RELAY");
+  tft.drawText(70,140,"CHANNELS");
+  delay(1000);
+  tft.clear();
+  }
+
+void position1()
+{
+  }
+void position2()
+{
+  }
+void position3()
+{
+  }
+
+void position4()
+{
+  }
+void position5()
+{
+  }
+void position6()
+{
+  }
+void position7()
+{
+  }
+void position8()
+{
+  }
+
+void position9()
+{
+  }
+void position10()
+{
+  }
+  
